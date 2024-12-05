@@ -1,0 +1,40 @@
+﻿@model WebApplicationINSAT.Models.Customers
+
+@{
+    ViewData["Title"] = "Customer Details";
+}
+
+<h2>Customer Details</h2>
+
+<div>
+    <h4 style="color:red">Customer Information:</h4>
+    <p><strong>Name:</strong> @Model.Name</p>
+    <p><strong>Membership Type:</strong> @Model.Membership.Name</p>
+    <h4 style="color:red">Membership Details:</h4>
+    <ul>
+        <li><strong>Sign-Up Fee:</strong> @Model.Membership.SignUpFee</li>
+        <li><strong>Duration (Months):</strong> @Model.Membership.DurationInMonth</li>
+        <li><strong>Discount Rate:</strong> @Model.Membership.DiscountRate%</li>
+    </ul>
+</div>
+
+@if (Model.Moviesc != null && Model.Moviesc.Any())
+{
+    <div>
+        <h4 style="color:red">Movies Rented</h4>
+        <ul>
+            @foreach (var movie in Model.Moviesc)
+            {
+                <li>@movie.Name</li>
+            }
+        </ul>
+    </div>
+}
+else
+{
+    <h4 style="color:red">No movies rented.</h4>
+}
+
+<div>
+    <a asp-action="Index" class="btn btn-primary">Back to List</a>
+</div>

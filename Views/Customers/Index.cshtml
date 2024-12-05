@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+<h1>@ViewData["Title"]</h1>
+<p>
+    <a asp-controller="Customers" asp-action="Create">Create new</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Discount Rate</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cd in ViewBag.CustomerDetails)
+        {
+        <tr>
+            <td>@cd.CustomerName</td>
+            <td>@cd.Dicrate</td>
+
+            <td>
+                <a asp-controller="Customers" asp-action="Edit" asp-route-id="@cd.cusid">Edit</a> |
+                    <a asp-controller="Customers" asp-action="Details" asp-route-id="@cd.cusid">Details</a> |
+                    <a asp-controller="Customers" asp-action="Delete" asp-route-id="@cd.cusid">Delete</a>
+            </td>
+        </tr>
+        }
+        
+       </tbody>
+</table>
