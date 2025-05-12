@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebApplicationINSAT")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6e6ed7a8d38daab10505b1af24c508cc973873c0")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebApplicationINSAT")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebApplicationINSAT")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

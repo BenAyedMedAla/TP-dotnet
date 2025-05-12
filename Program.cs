@@ -1,10 +1,13 @@
 using Microsoft.EntityFrameworkCore;
 using WebApplicationINSAT.Models;
+using WebApplicationINSAT.Services.ServiceContracts;
+using WebApplicationINSAT.Services.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IMovieService, MovieService>();
 builder.Services.AddDbContext<ApplicationDbcontext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"
 )));

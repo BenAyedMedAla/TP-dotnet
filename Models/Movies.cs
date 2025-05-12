@@ -6,6 +6,8 @@ namespace WebApplicationINSAT.Models
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
+       public DateTime ReleaseDate { get; set; }
+        public Genres? Genres { get; set; } 
         public Guid Genre_id { get; set; }
         public List<Customers> Cus { get; set; }
         public Movies() { }

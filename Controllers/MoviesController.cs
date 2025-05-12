@@ -12,7 +12,8 @@ namespace WebApplicationINSAT.Controllers
         }
         public IActionResult Index()
         {
-            return View();
+            var movies=_db.Movies.ToList();
+            return View(movies);
         }
         public IActionResult Create()
         {
